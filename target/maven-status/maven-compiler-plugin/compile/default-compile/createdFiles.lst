@@ -1,1 +1,4 @@
-com\example\HolaServlet.class
+com\poliweb\servlet\PolibusServlet.class
+com\poliweb\resources\JakartaEE10Resource.class
+com\poliweb\servlet\Ruta.class
+com\poliweb\JakartaRestConfiguration.class
