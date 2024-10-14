@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.poliweb;
 
 import jakarta.servlet.ServletException;
@@ -11,36 +7,34 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
-import persistencia.RutaJpaController;
+import persistencia.ControladoraPersistencia;
 
-@WebServlet("/rutas")
+@WebServlet("/buses")
 public class RutaController extends HttpServlet {
-
-    private RutaJpaController rutaJpaController = new RutaJpaController();
+    private ControladoraPersistencia controladoraPersistencia = new ControladoraPersistencia();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Ruta> rutas;
-
         try {
-            // Obtener el parámetro de búsqueda
-            String query = request.getParameter("query");
-
-            // Obtener rutas según el parámetro de búsqueda
-            if (query != null && !query.isEmpty()) {
-                rutas = rutaJpaController.leerRuta(); // Usar el método de búsqueda
+            // Recuperar las rutas desde la base de datos
+            List<Ruta> rutas = controladoraPersistencia.obtenerTodasLasRutas();
+            
+            // Imprimir en consola para verificar si las rutas se están pasando correctamente
+            if (rutas != null) {
+                System.out.println("Número de pendejos: " + rutas.size());
+                for (Ruta ruta : rutas) {
+                    System.out.println("Ruta: " + ruta.getNombreRuta() + ", Paradas: " + ruta.getParadas() + ", Horario: " + ruta.getHorario());
+                }
             } else {
-                rutas = rutaJpaController.findRutaEntities(); // Obtener todas las rutas
+                System.out.println("No se han recuperado rutas.");
             }
 
-            // Guardar las rutas en el request
+            // Pasar las rutas al JSP
             request.setAttribute("rutas", rutas);
-
-            // Redirigir al JSP polibus.jsp
             request.getRequestDispatcher("polibus.jsp").forward(request, response);
         } catch (Exception e) {
-            e.printStackTrace(); // Registrar la excepción
-            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR); // Enviar error 500
+            e.printStackTrace();
+            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Error en la consulta: " + e.getMessage());
         }
     }
 }

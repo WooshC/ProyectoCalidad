@@ -10,11 +10,14 @@ import persistencia.ControladoraPersistencia;
 public class Controladora {
     private ControladoraPersistencia controlPersis = new ControladoraPersistencia();
     
-    public void crearRuta(Ruta ruta) {
-        controlPersis.crearRuta(ruta);
+    
+    // Método para buscar rutas por paradas (búsqueda parcial)
+    public List<Ruta> buscarRutaPorParadas(String paradas) {
+        return controlPersis.buscarRutaPorParadas(paradas);
     }
     
-    public List<Ruta> leerRuta() {
-        return controlPersis.leerRuta(); // Asegúrate de que este método en ControladoraPersistencia esté correctamente implementado
+    // Método para obtener todas las rutas
+    public List<Ruta> obtenerTodasLasRutas() {
+        return controlPersis.obtenerTodasLasRutas();
     }
 }

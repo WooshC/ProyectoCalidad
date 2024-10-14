@@ -37,7 +37,31 @@
         <script>
             function showTab(tabName) {
                 console.log("Cargando pestaña: " + tabName);
-                $('#tabContent').load(tabName + '.jsp', function(response, status, xhr) {
+                let url = '';
+
+                switch (tabName) {
+                    case 'polibus':
+                        url = '/PaginaWebPoli/buses'; // URL para cargar las rutas
+                        break;
+                    case 'cafeteria':
+                        url = '/PaginaWebPoli/cafeteria'; // URL para cargar la cafetería
+                        break;
+                    case 'fepon':
+                        url = '/PaginaWebPoli/fepon'; // URL para cargar Fepon
+                        break;
+                    case 'comentarios':
+                        url = '/PaginaWebPoli/comentarios'; // URL para cargar comentarios
+                        break;
+                    case 'social':
+                        url = '/PaginaWebPoli/social'; // URL para cargar área social
+                        break;
+                    default:
+                        console.error("Tab no reconocido: " + tabName);
+                        return; // Salir si no hay URL definida
+                }
+
+                // Cargar contenido usando la URL correspondiente
+                $('#tabContent').load(url, function (response, status, xhr) {
                     if (status === "error") {
                         console.error("Error al cargar la pestaña: " + xhr.status + " " + xhr.statusText);
                         $('#tabContent').html('<div class="alert alert-danger">Error al cargar el contenido. Inténtalo nuevamente más tarde.</div>');
@@ -45,10 +69,11 @@
                 });
             }
 
-            // Mostrar la pestaña por defecto al cargar la página
+// Mostrar la pestaña por defecto al cargar la página
             $(document).ready(function () {
                 showTab('polibus'); // Cargar la pestaña "polibus" al inicio
             });
+
         </script>
     </head>
     <body>
