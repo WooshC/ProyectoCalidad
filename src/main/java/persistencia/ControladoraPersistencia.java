@@ -2,7 +2,6 @@ package persistencia;
 
 import com.poliweb.Ruta;
 import java.util.Collections;
-import java.util.List;
 
 /**
  *
@@ -31,14 +30,21 @@ public class ControladoraPersistencia {
         }
     }
     
-    public List<Ruta> obtenerTodasLasRutas() {
+   public List<Ruta> obtenerTodasLasRutas() {
     try {
         List<Ruta> rutas = rutaJpa.obtenerTodasLasRutas();
+        
+        // Forzar la recarga desde la base de datos
+        for (Ruta ruta : rutas) {
+            rutaJpa.getEntityManager().refresh(ruta); // Recargar cada entidad desde la base de datos
+        }
+        
         return rutas;
     } catch (Exception e) {
         return Collections.emptyList(); // Cambia a una lista vacía en caso de error
     }
 }
+
 
     
     // Método para mostrar buses en consola

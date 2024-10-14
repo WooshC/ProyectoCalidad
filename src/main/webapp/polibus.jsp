@@ -1,7 +1,7 @@
 <%@ page contentType="text/html" pageEncoding="UTF-8" %>
 <%@ page import="java.util.List" %>
 <%@ page import="com.poliweb.Ruta" %>
-<%@ page import="persistencia.RutaJpaController" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> <!-- Importamos JSTL -->
 
 <!DOCTYPE html>
 <html lang="es">
@@ -28,19 +28,14 @@
             <h2 class="text-2xl font-bold mb-4">Polibus</h2>
             <p class="mb-4">El Polibus es el servicio de transporte para estudiantes de la EPN. Aquí puedes encontrar información sobre las rutas disponibles:</p>
 
-            <form action="rutas" method="GET" class="mb-4">
-                <div class="input-group">
-                    <input type="text" class="form-control" name="query" placeholder="Buscar ruta por nombre" required>
-                    <div class="input-group-append">
-                        <button class="btn btn-primary" type="submit">Buscar</button>
-                    </div>
-                </div>
-            </form>
+            <div class="mb-4">
+                <input type="text" id="searchInput" class="form-control" placeholder="Buscar ruta por nombre o paradas" onkeyup="filtrarRutas()">
+            </div>
 
-            <p>Total de rutas: ${not empty rutas ? rutas.size() : 0}</p>
+            <p>Total de rutas: <c:out value="${not empty rutas ? rutas.size() : 0}" /></p>
 
             <div class="table-responsive">
-                <table class="table table-bordered">
+                <table class="table table-bordered" id="rutasTable">
                     <thead class="thead-light">
                         <tr>
                             <th>Nombre de la Ruta</th>
@@ -51,11 +46,11 @@
                     <tbody>
                     <c:choose>
                         <c:when test="${not empty rutas}">
-                            <c:forEach var="rutas" items="${rutas}">
+                            <c:forEach var="ruta" items="${rutas}">
                                 <tr>
-                                    <td>${ruta.nombreRuta}</td>
-                                    <td>${ruta.paradas}</td>
-                                    <td>${ruta.horario}</td>
+                                    <td><c:out value="${ruta.nombreRuta}" /></td>
+                                    <td><c:out value="${ruta.paradas}" /></td>
+                                    <td><c:out value="${ruta.horario}" /></td>
                                 </tr>
                             </c:forEach>
                         </c:when>
@@ -71,9 +66,31 @@
         </div>
     </div>
 
-    <!-- JavaScript para imprimir en la consola del navegador -->
+    <!-- JavaScript para filtrar las rutas -->
     <script>
-        console.log("Número de rutas recuperadas: ${not empty rutas ? rutas.size() : 'null'}");
+        function filtrarRutas() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const table = document.getElementById('rutasTable');
+            const tr = table.getElementsByTagName('tr');
+
+            for (let i = 1; i < tr.length; i++) { // Comenzar desde 1 para evitar el encabezado
+                const tdNombre = tr[i].getElementsByTagName('td')[0]; // Nombre de la ruta
+                const tdParadas = tr[i].getElementsByTagName('td')[1]; // Paradas
+
+                if (tdNombre || tdParadas) {
+                    const txtValueNombre = tdNombre.textContent || tdNombre.innerText;
+                    const txtValueParadas = tdParadas.textContent || tdParadas.innerText;
+
+                    if (txtValueNombre.toLowerCase().indexOf(filter) > -1 || 
+                        txtValueParadas.toLowerCase().indexOf(filter) > -1) {
+                        tr[i].style.display = ""; // Mostrar la fila
+                    } else {
+                        tr[i].style.display = "none"; // Ocultar la fila
+                    }
+                }
+            }
+        }
     </script>
 
     <!-- jQuery (debe estar antes de Bootstrap JS) -->
@@ -84,3 +101,4 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+

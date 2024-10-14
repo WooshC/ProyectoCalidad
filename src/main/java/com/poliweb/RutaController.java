@@ -17,18 +17,7 @@ public class RutaController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             // Recuperar las rutas desde la base de datos
-            List<Ruta> rutas = controladoraPersistencia.obtenerTodasLasRutas();
-            
-            // Imprimir en consola para verificar si las rutas se están pasando correctamente
-            if (rutas != null) {
-                System.out.println("Número de pendejos: " + rutas.size());
-                for (Ruta ruta : rutas) {
-                    System.out.println("Ruta: " + ruta.getNombreRuta() + ", Paradas: " + ruta.getParadas() + ", Horario: " + ruta.getHorario());
-                }
-            } else {
-                System.out.println("No se han recuperado rutas.");
-            }
-
+            List<Ruta> rutas = controladoraPersistencia.obtenerTodasLasRutas();       
             // Pasar las rutas al JSP
             request.setAttribute("rutas", rutas);
             request.getRequestDispatcher("polibus.jsp").forward(request, response);

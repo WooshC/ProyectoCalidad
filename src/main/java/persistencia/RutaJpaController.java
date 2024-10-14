@@ -81,5 +81,13 @@ public class RutaJpaController implements Serializable {
             emf.close();
         }
     }
+    
+    public EntityManager getEntityManager() {
+    if (em == null || !em.isOpen()) {
+        em = emf.createEntityManager(); // Crear una nueva instancia si no está disponible o abierta
+    }
+    return em;
+}
+
 
 }
