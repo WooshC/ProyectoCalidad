@@ -45,9 +45,11 @@
                         break;
                     case 'cafeteria':
                         url = '/PaginaWebPoli/cafeteria'; // URL para cargar la cafetería
+                        console.log("URL cargada: " + url);
                         break;
-                    case 'fepon':
-                        url = '/PaginaWebPoli/fepon'; // URL para cargar Fepon
+                    case 'asociacion':
+                        url = '/PaginaWebPoli/asociaciones'; // URL para cargar asociacion
+                        console.log("URL cargada: " + url);
                         break;
                     case 'comentarios':
                         url = '/PaginaWebPoli/comentarios'; // URL para cargar comentarios
@@ -93,7 +95,7 @@
                                     <a class="nav-link" href="javascript:void(0);" onclick="showTab('cafeteria')" type="button">Cafetería</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="javascript:void(0);" onclick="showTab('fepon')" type="button">Fepon</a>
+                                    <a class="nav-link" href="javascript:void(0);" onclick="showTab('asociacion')" type="button">Asociacion</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="javascript:void(0);" onclick="showTab('comentarios')" type="button">Comentarios</a>
