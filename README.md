@@ -1,2 +1,2 @@
-# GR06_1BT2_622_24A
-Proyecto web de prueba
+# Proyecto de calidad (PoliWeb)
+Se hara una pagina web de la politecnica nacional
