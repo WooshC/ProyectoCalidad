@@ -65,7 +65,6 @@ public class AsociacionController extends HttpServlet {
 
         // Verificar si se debe mostrar la cuenta bancaria
         boolean mostrarCuentaBancaria = "mostrarCuenta".equals(accion);
-        
 
         // Pasar la lista de asociaciones, la asociación seleccionada y la bandera de la cuenta bancaria al JSP
         request.setAttribute("asociaciones", asociaciones);

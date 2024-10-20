@@ -1,9 +1,13 @@
+com\poliweb\modelo\Ruta.class
 com\poliweb\resources\JakartaEE10Resource.class
-com\poliweb\Controladora.class
+com\poliweb\controladores\AsociacionController$Asociacion.class
 persistencia\RutaJpaController.class
-com\poliweb\Ruta.class
+com\poliweb\modelo\Cafeteria.class
+persistencia\CafeteriaJPAController.class
+com\poliweb\controladores\AsociacionController$Asociacion$Plan.class
+com\poliweb\controladores\CafeteriaController.class
+com\poliweb\controladores\RutaController.class
 persistencia\exceptions\NonexistentEntityException.class
 persistencia\exceptions\PreexistingEntityException.class
-com\poliweb\RutaController.class
-persistencia\ControladoraPersistencia.class
+com\poliweb\controladores\AsociacionController.class
 persistencia\exceptions\IllegalOrphanException.class

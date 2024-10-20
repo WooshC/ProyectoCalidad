@@ -26,16 +26,6 @@ public class RutaJpaController implements Serializable {
         return instance;
     }
 
-    public List<Ruta> buscarRutaPorParadas(String paradas) {
-        try {
-            Query query = em.createQuery("SELECT r FROM Ruta r WHERE r.paradas LIKE :paradas");
-            query.setParameter("paradas", "%" + paradas + "%");
-            return query.getResultList();
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
 
     public List<Ruta> obtenerTodasLasRutas() {
         try {
