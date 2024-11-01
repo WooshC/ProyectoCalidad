@@ -7,6 +7,7 @@ import jakarta.persistence.Persistence;
 import jakarta.persistence.Query;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 public class CafeteriaJPAController implements Serializable {
@@ -45,7 +46,7 @@ public class CafeteriaJPAController implements Serializable {
             return query.getResultList();
         } catch (Exception e) {
             e.printStackTrace();
-            return null;
+            return new ArrayList<>();
         }
     }
 

@@ -7,6 +7,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import persistencia.RutaJpaController;
+import persistencia.exceptions.RutaNotFoundException;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -42,11 +43,10 @@ public class RutaController extends HttpServlet {
 
 
     private void manejarError(HttpServletResponse response, Exception e) throws IOException {
-        String errorMessage = "Error en la consulta: " + e.getMessage();
-        response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Error en la consulta");
-
+        // Enviar el error de respuesta
+        response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, ERROR_CONSULTA);
         // Guardar el error en un archivo
-        guardarErrorEnArchivo(errorMessage);
+        guardarErrorEnArchivo(ERROR_CONSULTA + e.getMessage());
     }
 
     private void guardarErrorEnArchivo(String errorMessage) {
@@ -62,8 +62,13 @@ public class RutaController extends HttpServlet {
 
 
 
-    private List<Ruta> obtenerRutas() throws Exception {
-        return controladoraPersistencia.obtenerTodasLasRutas();
+    private List<Ruta> obtenerRutas() throws RutaNotFoundException {
+        try {
+            return controladoraPersistencia.obtenerTodasLasRutas();
+        } catch (Exception e) {
+            // Lanzar la excepción personalizada con un mensaje apropiado
+            throw new RutaNotFoundException("No se pudieron obtener las rutas.", e);
+        }
     }
 
     private void pasarAtributosYDespachar(HttpServletRequest request, HttpServletResponse response, List<Ruta> rutas) throws ServletException, IOException {

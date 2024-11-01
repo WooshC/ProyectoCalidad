@@ -7,39 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal Estudiantil EPN</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        html, body {
-            height: 100%; /* Asegurarse de que el body ocupe el 100% de la altura */
-            margin: 0; /* Quitar márgenes por defecto */
-        }
-
-        .wrapper {
-            min-height: 100%; /* Altura mínima del contenedor para ocupar toda la página */
-            display: flex;
-            flex-direction: column; /* Flexbox para organizar el contenido en columnas */
-        }
-
-        .content {
-            flex: 1; /* Ocupa el espacio disponible entre el header y el footer */
-        }
-
-        .footer {
-            background-color: #2d3748; /* Color de fondo del footer */
-            color: white; /* Color del texto */
-            padding: 0.001rem; /* Disminuir el espaciado */
-            text-align: center; /* Centrar el texto */
-            font-size: 0.875rem; /* Disminuir el tamaño del texto si es necesario */
-        }
-
-        /* Centramos el spinner en el medio de la página */
-        .spinner-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            display: none; /* Ocultarlo inicialmente */
-        }
-    </style>
+    <link rel="stylesheet" href="css/index.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -101,19 +69,19 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0);" onclick="showTab('polibus')" type="button">Polibus</a>
+                            <button class="nav-link btn btn-link" onclick="showTab('polibus')" type="button">Polibus</button>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0);" onclick="showTab('cafeteria')" type="button">Cafetería</a>
+                            <button class="nav-link btn btn-link" onclick="showTab('cafeteria')" type="button">Cafetería</button>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0);" onclick="showTab('asociacion')" type="button">Asociacion</a>
+                            <button class="nav-link btn btn-link" onclick="showTab('asociacion')" type="button">Asociación</button>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0);" onclick="showTab('comentarios')" type="button">Comentarios</a>
+                            <button class="nav-link btn btn-link" onclick="showTab('comentarios')" type="button">Comentarios</button>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0);" onclick="showTab('social')" type="button">Área Social</a>
+                            <button class="nav-link btn btn-link" onclick="showTab('social')" type="button">Área Social</button>
                         </li>
                     </ul>
                 </div>
@@ -125,12 +93,12 @@
         <!-- Contenedor del contenido dinámico -->
         <div id="tabContent" class="tab-content" style="position: relative;">
             <!-- Spinner que se muestra mientras carga el contenido -->
-            <div id="spinner" class="spinner-wrapper">
-                <div class="spinner-border text-primary" role="status">
-                    <span class="sr-only">Cargando...</span>
-                </div>
+            <div id="spinner" class="spinner-wrapper" aria-live="polite">
+                <output class="spinner-border text-primary" aria-hidden="true"></output>
+                <span class="sr-only">Cargando...</span>
             </div>
         </div>
+
     </main>
 
     <footer class="footer">

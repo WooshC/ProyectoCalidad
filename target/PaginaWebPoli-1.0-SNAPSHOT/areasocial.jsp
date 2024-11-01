@@ -170,9 +170,5 @@
         });
     });
 </script>
-
-
-</script>
-
 </body>
 </html>

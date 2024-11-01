@@ -7,6 +7,7 @@ import jakarta.persistence.Persistence;
 import jakarta.persistence.Query;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.ConsoleHandler;
 import java.util.logging.Level;
@@ -47,20 +48,22 @@ public class RutaJpaController implements Serializable {
             Query query = em.createQuery("SELECT r FROM Ruta r");
             List<Ruta> rutas = query.getResultList();
 
-            logger.info("Número de rutas recuperadas: " + rutas.size());
+            if (rutas.isEmpty()) {
+                return new ArrayList<>(); // Retorna un ArrayList vacío en caso de un error
+            }
+            logger.info(String.format("Número de rutas recuperadas: %d", rutas.size()));
+
             for (Ruta ruta : rutas) {
-                logger.info("Ruta: " + ruta.getNombreRuta() + ", Paradas: " + ruta.getParadas() + ", Horario: " + ruta.getHorario());
+                logger.info(String.format("Ruta: %s, Paradas: %s, Horario: %s",
+                        ruta.getNombreRuta(), ruta.getParadas(), ruta.getHorario()));
             }
 
             return rutas;
         } catch (Exception e) {
             logger.log(Level.SEVERE, "Error obteniendo todas las rutas", e);
-            return null;
+            return new ArrayList<>(); // Retorna un ArrayList vacío en caso de un error
         } finally {
             em.close();
         }
     }
-
-
-
 }
