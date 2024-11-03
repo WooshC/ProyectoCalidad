@@ -42,7 +42,6 @@
     </style>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
     <script>
         function showTab(tabName) {
             console.log("Cargando pestaña: " + tabName);
@@ -59,7 +58,7 @@
                     url = '/PaginaWebPoli/cafeteria'; // URL para cargar la cafetería
                     break;
                 case 'fepon':
-                    url = '/PaginaWebPoli/Fepon'; // URL para cargar asociacion
+                    url = '/PaginaWebPoli/feponPage'; // URL para cargar asociacion
                     break;
                 case 'polimercado':
                     url = '/PaginaWebPoli/polimarket'; // URL para cargar área social
