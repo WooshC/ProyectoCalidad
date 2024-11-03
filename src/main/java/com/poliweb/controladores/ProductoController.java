@@ -23,9 +23,8 @@ public class ProductoController extends HttpServlet {
             double precioProducto;
 
             // Intentar convertir el precio del producto a un número
-            try {
-                precioProducto = Double.parseDouble(request.getParameter("precioProducto"));
-            } catch (NumberFormatException e) {
+            precioProducto = Double.parseDouble(request.getParameter("precioProducto"));
+            if (precioProducto < 0) {
                 response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
                 response.getWriter().write("{\"success\": false, \"message\": \"El precio del producto debe ser un número válido\"}");
                 return; // Salir del método para evitar continuar con la lógica

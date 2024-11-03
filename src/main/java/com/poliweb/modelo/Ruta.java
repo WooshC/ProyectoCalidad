@@ -11,7 +11,6 @@ public class Ruta implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO) // Genera un ID autoincremental
     private Long id_bus; // ID único para la ruta
-
     private String ruta; // Nombre de la ruta
     private String paradas; // Paradas de la ruta
     private String horario; // Horario de la ruta
