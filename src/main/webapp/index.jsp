@@ -58,14 +58,11 @@
                 case 'cafeteria':
                     url = '/PaginaWebPoli/cafeteria'; // URL para cargar la cafetería
                     break;
-                case 'asociacion':
-                    url = '/PaginaWebPoli/asociaciones'; // URL para cargar asociacion
+                case 'fepon':
+                    url = '/PaginaWebPoli/Fepon'; // URL para cargar asociacion
                     break;
-                case 'comentarios':
-                    url = '/PaginaWebPoli/comentarios'; // URL para cargar comentarios
-                    break;
-                case 'social':
-                    url = '/PaginaWebPoli/social'; // URL para cargar área social
+                case 'polimercado':
+                    url = '/PaginaWebPoli/polimarket'; // URL para cargar área social
                     break;
                 default:
                     console.error("Tab no reconocido: " + tabName);
@@ -107,13 +104,10 @@
                             <a class="nav-link" href="javascript:void(0);" onclick="showTab('cafeteria')" type="button">Cafetería</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0);" onclick="showTab('asociacion')" type="button">Asociacion</a>
+                            <a class="nav-link" href="javascript:void(0);" onclick="showTab('fepon')" type="button">Fepon</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0);" onclick="showTab('comentarios')" type="button">Comentarios</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0);" onclick="showTab('social')" type="button">Área Social</a>
+                            <a class="nav-link" href="javascript:void(0);" onclick="showTab('polimercado')" type="button">PoliMarket</a>
                         </li>
                     </ul>
                 </div>
