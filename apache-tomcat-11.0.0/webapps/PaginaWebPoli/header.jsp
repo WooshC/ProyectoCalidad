@@ -25,5 +25,10 @@
         </nav>
     </div>
 </header>
+
+<script>
+    // JavaScript Personalizado
+    // Aquí puedes agregar tu código JavaScript personalizado.
+</script>
 </body>
 </html>

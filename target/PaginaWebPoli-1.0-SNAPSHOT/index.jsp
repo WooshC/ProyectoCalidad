@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="css/index.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
     <script>
         function showTab(tabName) {
             console.log("Cargando pestaña: " + tabName);
@@ -26,14 +25,11 @@
                 case 'cafeteria':
                     url = '/PaginaWebPoli/cafeteria'; // URL para cargar la cafetería
                     break;
-                case 'asociacion':
-                    url = '/PaginaWebPoli/asociaciones'; // URL para cargar asociacion
+                case 'fepon':
+                    url = '/PaginaWebPoli/feponPage'; // URL para cargar asociacion
                     break;
-                case 'comentarios':
-                    url = '/PaginaWebPoli/comentarios'; // URL para cargar comentarios
-                    break;
-                case 'social':
-                    url = '/PaginaWebPoli/social'; // URL para cargar área social
+                case 'polimercado':
+                    url = '/PaginaWebPoli/polimarket'; // URL para cargar área social
                     break;
                 default:
                     console.error("Tab no reconocido: " + tabName);
@@ -69,19 +65,16 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <button class="nav-link btn btn-link" onclick="showTab('polibus')" type="button">Polibus</button>
+                            <a class="nav-link" href="javascript:void(0);" onclick="showTab('polibus')" type="button">Polibus</a>
                         </li>
                         <li class="nav-item">
-                            <button class="nav-link btn btn-link" onclick="showTab('cafeteria')" type="button">Cafetería</button>
+                            <a class="nav-link" href="javascript:void(0);" onclick="showTab('cafeteria')" type="button">Cafetería</a>
                         </li>
                         <li class="nav-item">
-                            <button class="nav-link btn btn-link" onclick="showTab('asociacion')" type="button">Asociación</button>
+                            <a class="nav-link" href="javascript:void(0);" onclick="showTab('fepon')" type="button">Fepon</a>
                         </li>
                         <li class="nav-item">
-                            <button class="nav-link btn btn-link" onclick="showTab('comentarios')" type="button">Comentarios</button>
-                        </li>
-                        <li class="nav-item">
-                            <button class="nav-link btn btn-link" onclick="showTab('social')" type="button">Área Social</button>
+                            <a class="nav-link" href="javascript:void(0);" onclick="showTab('polimercado')" type="button">PoliMarket</a>
                         </li>
                     </ul>
                 </div>

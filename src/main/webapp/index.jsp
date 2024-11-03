@@ -65,10 +65,10 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <button class="nav-link btn btn-link" onclick="showTab('polibus')" type="button">Polibus</button>
+                            <a class="nav-link" href="javascript:void(0);" onclick="showTab('polibus')" type="button">Polibus</a>
                         </li>
                         <li class="nav-item">
-                            <button class="nav-link btn btn-link" onclick="showTab('cafeteria')" type="button">Cafetería</button>
+                            <a class="nav-link" href="javascript:void(0);" onclick="showTab('cafeteria')" type="button">Cafetería</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="javascript:void(0);" onclick="showTab('fepon')" type="button">Fepon</a>
