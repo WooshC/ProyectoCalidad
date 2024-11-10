@@ -4,51 +4,42 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Column;
+
+import java.util.Date;
 
 @Entity
 public class Cafeteria {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nombreMenu;
-    private String descripcionMenu;
-    private Double precio;
-    private String tipoMenu;
 
-    public Cafeteria(Long id, String nombreMenu, String descripcionMenu, Double precio, String tipoMenu) {
+    @Column(nullable = false)
+    private Date fecha;
+
+    @Column(nullable = false)
+    private String categoria;
+
+    @Column(nullable = false)
+    private String nombrePlato;
+
+    @Column(nullable = false)
+    private String descripcion;
+
+    @Column(nullable = false)
+    private Double precio;
+
+    public Cafeteria(Long id, Date fecha, String categoria, String nombrePlato, String descripcion, Double precio) {
         this.id = id;
-        this.nombreMenu = nombreMenu;
-        this.descripcionMenu = descripcionMenu;
+        this.fecha = fecha;
+        this.categoria = categoria;
+        this.nombrePlato = nombrePlato;
+        this.descripcion = descripcion;
         this.precio = precio;
-        this.tipoMenu = tipoMenu;
     }
 
     public Cafeteria() {
-
-    }
-
-    public String getTipoMenu() {
-        return tipoMenu;
-    }
-
-    public void setTipoMenu(String tipoMenu) {
-        this.tipoMenu = tipoMenu;
-    }
-
-    public Double getPrecio() {
-        return precio;
-    }
-
-    public void setPrecio(Double precio) {
-        this.precio = precio;
-    }
-
-    public String getDescripcionMenu() {
-        return descripcionMenu;
-    }
-
-    public void setDescripcionMenu(String descripcionMenu) {
-        this.descripcionMenu = descripcionMenu;
     }
 
     public Long getId() {
@@ -59,12 +50,43 @@ public class Cafeteria {
         this.id = id;
     }
 
-    public String getNombreMenu() {
-        return nombreMenu;
+    public Date getFecha() {
+        return fecha;
     }
 
-    public void setNombreMenu(String nombreMenu) {
-        this.nombreMenu = nombreMenu;
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
     }
 
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+    public String getNombrePlato() {
+        return nombrePlato;
+    }
+
+    public void setNombrePlato(String nombrePlato) {
+        this.nombrePlato = nombrePlato;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public Double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(Double precio) {
+        this.precio = precio;
+    }
 }

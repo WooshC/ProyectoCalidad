@@ -4,17 +4,18 @@ USE javaweb;
 
 CREATE TABLE cafeteria (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nombreMenu VARCHAR(100) NOT NULL,
-    descripcionMenu TEXT NOT NULL,
-    precio DECIMAL(10, 2) NOT NULL,
-    tipoMenu VARCHAR(50) NOT NULL
-);
+    fecha DATE NOT NULL,
+    categoria VARCHAR(255) NOT NULL,
+    nombrePlato VARCHAR(255) NOT NULL,
+    descripcion TEXT NOT NULL,
+    precio DECIMAL(10, 2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO cafeteria (nombreMenu, descripcionMenu, precio, tipoMenu)
-VALUES 
-('Desayuno Continental', 'Incluye jugo de naranja, huevos fritos y café con pan.', 2.50, 'Desayuno'),
-('Ensalada César', 'Lechuga, pollo a la parrilla, aderezo César y crutones.', 3.50, 'Almuerzo'),
-('Limonada', 'Bebida refrescante de limón natural.', 1.00, 'Bebida');
+INSERT INTO cafeteria (fecha, categoria, nombrePlato, descripcion, precio)
+VALUES
+    ('2024-11-10', 'Almuerzos', 'Almuerzo Estudiantil', 'Entrada: Ensalada César, Plato Fuerte: Pollo a la plancha, Bebida: Limonada, Postre: Gelatina', 8.50),
+    ('2024-11-10', 'Almuerzos', 'Almuerzo Premium', 'Entrada: Sopa de tomate, Plato Fuerte: Filete de res, Bebida: Jugo de naranja, Postre: Cheesecake', 12.00),
+    ('2024-11-10', 'Desayunos', 'Desayuno Básico', 'Huevos revueltos, Pan tostado, Café o Té', 5.00);
 
 CREATE TABLE buses (
   id_bus bigint unsigned NOT NULL AUTO_INCREMENT,
