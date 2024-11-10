@@ -9,6 +9,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import persistencia.CafeteriaJPAController;
 
 import java.io.IOException;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -26,15 +27,22 @@ public class CafeteriaController extends HttpServlet {
 
     // Método en el controlador para obtener los elementos agrupados por categoría
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Cafeteria> menuItems = cafeteriaJPAController.obtenerMenuDelDia();
 
-        // Agrupar los elementos por categoría
-        Map<String, List<Cafeteria>> menuGroupedByCategory = menuItems.stream()
-                .collect(Collectors.groupingBy(Cafeteria::getCategoria));
+        int dayOfWeek = Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
+        boolean isWeekday = dayOfWeek >= Calendar.MONDAY && dayOfWeek <= Calendar.FRIDAY;
 
-        // Pasar la lista de platos agrupados por categoría al JSP
-        request.setAttribute("menuGroupedByCategory", menuGroupedByCategory);
-        request.getRequestDispatcher("cafeteria.jsp").forward(request, response);
+        if (isWeekday) {
+            List<Cafeteria> menuItems = cafeteriaJPAController.obtenerMenuDelDia();
+
+            // Agrupar los elementos por categoría
+            Map<String, List<Cafeteria>> menuGroupedByCategory = menuItems.stream()
+                    .collect(Collectors.groupingBy(Cafeteria::getCategoria));
+
+            // Pasar la lista de platos agrupados por categoría al JSP
+            request.setAttribute("menuGroupedByCategory", menuGroupedByCategory);
+            request.getRequestDispatcher("cafeteria.jsp").forward(request, response);
+        } else {
+            request.getRequestDispatcher("cerrado.jsp").forward(request, response);
+        }
     }
-
 }
