@@ -1,7 +1,7 @@
 # Instalación y Configuración
 
 ## Versión
-**Versión:** 1.2
+**Versión:** 1.3
 
 ## Requisitos
 
@@ -50,7 +50,6 @@ la siguiente manera:
 Para configurar el servidor TomCat en Intellij necesitamos  realizarlo de la siguiente manera:
 
 *Nota:El archivo Tomcat ya viene incluido en el proyecto, por lo que se debe descomprimir y colocarlo en un lugar adecuado para su utilización*
-*recomedancion en la misma ruta donde se encuentra *./doc/instalacion/<tomcat>* *
 
 1. Abrir el proyecto en Intellij
 2. En la parte de **File** buscar la seccón **Settings**
