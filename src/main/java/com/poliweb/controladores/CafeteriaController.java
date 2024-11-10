@@ -10,6 +10,8 @@ import persistencia.CafeteriaJPAController;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @WebServlet("/cafeteria")
 public class CafeteriaController extends HttpServlet {
@@ -22,13 +24,17 @@ public class CafeteriaController extends HttpServlet {
         cafeteriaJPAController = CafeteriaJPAController.getInstance(); // Inicializa el controlador JPA
     }
 
-    @Override
+    // Método en el controlador para obtener los elementos agrupados por categoría
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // Obtener todos los elementos del menú desde la base de datos
-        List<Cafeteria> menuItems = cafeteriaJPAController.obtenerMenu();
+        List<Cafeteria> menuItems = cafeteriaJPAController.obtenerMenuDelDia();
 
-        // Pasar la lista de menú al JSP
-        request.setAttribute("menuItems", menuItems);
+        // Agrupar los elementos por categoría
+        Map<String, List<Cafeteria>> menuGroupedByCategory = menuItems.stream()
+                .collect(Collectors.groupingBy(Cafeteria::getCategoria));
+
+        // Pasar la lista de platos agrupados por categoría al JSP
+        request.setAttribute("menuGroupedByCategory", menuGroupedByCategory);
         request.getRequestDispatcher("cafeteria.jsp").forward(request, response);
     }
+
 }

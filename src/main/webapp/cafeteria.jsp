@@ -1,50 +1,61 @@
-<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ page import="java.text.SimpleDateFormat" %>
+<%@ page import="java.util.Date" %>
+<%@ page import="java.util.Locale" %>
 
-<!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cafetería EPN</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Menú de la Cafetería</title>
+    <link rel="stylesheet" type="text/css" href="css/cafeteria.css">
 </head>
 <body>
-<div class="container my-4">
-    <div class="bg-white p-6 rounded-lg shadow-lg">
-        <h2 class="text-2xl font-bold mb-4">Cafetería EPN</h2>
-        <p class="mb-4">Disfruta de nuestro variado menú en la cafetería de la universidad:</p>
+<%
+    Locale locale = new Locale("es", "ES");
+    SimpleDateFormat formatter = new SimpleDateFormat("EEEE, MMMM dd, yyyy", locale);
+    String fechaActual = formatter.format(new Date());
+%>
+<h1>Menú de la Cafetería</h1>
+<h2><%= fechaActual %></h2>
 
-        <div class="table-responsive">
-            <table class="table table-bordered">
-                <thead class="thead-light">
-                <tr>
-                    <th>Nombre del Menú</th>
-                    <th>Descripción</th>
-                    <th>Tipo</th>
-                    <th>Precio</th>
-                </tr>
-                </thead>
-                <tbody>
-                <c:forEach var="item" items="${menuItems}">
-                    <tr>
-                        <td><c:out value="${item.nombreMenu}" /></td>
-                        <td><c:out value="${item.descripcionMenu}" /></td>
-                        <td><c:out value="${item.tipoMenu}" /></td>
-                        <td><c:out value="${item.precio}" /></td>
-                    </tr>
-                </c:forEach>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
+<!-- Iterar sobre cada categoría en el mapa -->
+<c:forEach var="entry" items="${menuGroupedByCategory}">
+    <!-- Obtener el nombre de la categoría -->
+    <h2>${entry.key}</h2>
 
-<!-- jQuery (debe estar antes de Bootstrap JS) -->
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<!-- Popper.js -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<!-- Bootstrap JS -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Crear una tabla para cada categoría -->
+    <table class="menu-table">
+        <thead>
+        <tr>
+            <th>Nombre del Plato</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <c:forEach var="cafeteria" items="${entry.value}">
+            <tr>
+                <td>${cafeteria.nombrePlato}</td>
+
+                <!-- Mostrar la descripción como una lista separada por comas -->
+                <td>
+                    <ul>
+                        <!-- Usamos fn:split para separar la descripción por comas -->
+                        <c:forEach var="item" items="${fn:split(cafeteria.descripcion, ',')}" varStatus="status">
+                            <li>${item}</li>
+                        </c:forEach>
+                    </ul>
+                </td>
+
+                <td>${cafeteria.precio}</td>
+            </tr>
+        </c:forEach>
+
+        </tbody>
+    </table>
+</c:forEach>
+
 </body>
 </html>
