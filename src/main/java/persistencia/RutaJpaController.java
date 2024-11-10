@@ -54,8 +54,8 @@ public class RutaJpaController implements Serializable {
             logger.info(String.format("Número de rutas recuperadas: %d", rutas.size()));
 
             for (Ruta ruta : rutas) {
-                logger.info(String.format("Ruta: %s, Paradas: %s, Horario: %s",
-                        ruta.getNombreRuta(), ruta.getParadas(), ruta.getHorario()));
+                logger.info(String.format("Ruta: %s, Paradas: %s, Horario: %s, Ubicación: %s, Mapa URL: %s",
+                        ruta.getNombreRuta(), ruta.getParadas(), ruta.getHorario(), ruta.getUbicacion(), ruta.getMapaUrl()));
             }
 
             return rutas;
