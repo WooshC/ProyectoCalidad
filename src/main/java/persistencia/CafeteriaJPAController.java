@@ -40,6 +40,7 @@ public class CafeteriaJPAController implements Serializable {
         }
     }
 
+    // Obtener todos los elementos del menú
     public List<Cafeteria> obtenerMenu() {
         try {
             Query query = em.createQuery("SELECT c FROM Cafeteria c");
@@ -50,4 +51,14 @@ public class CafeteriaJPAController implements Serializable {
         }
     }
 
+    public List<Cafeteria> obtenerMenuDelDia() {
+        try {
+            // Crear la consulta para obtener los elementos del menú del día actual
+            Query query = em.createQuery("SELECT c FROM Cafeteria c WHERE c.fecha = CURRENT_DATE");
+            return query.getResultList();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ArrayList<>();
+        }
+    }
 }
