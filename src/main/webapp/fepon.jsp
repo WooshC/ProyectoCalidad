@@ -19,7 +19,7 @@
             <div class="d-flex align-items-start mb-4">
                 <i class="fas fa-users fa-2x mr-3 text-primary"></i>
                 <div>
-                    <h3 class="h5 font-weight-bold">Representación Estudiantil</h3>
+                    <h3 class="h5 font-weight-bold">FEPON</h3>
                     <p>La FEPON trabaja para defender los derechos e intereses de los estudiantes ante las autoridades universitarias.</p>
                 </div>
             </div>
@@ -105,15 +105,18 @@
         </div>
     </div>
 </div>
+
 <div class="container">
+    <div class="bg-white p-4 rounded-lg shadow">
         <div class="mt-4">
             <h3 class="h5 font-weight-bold mb-2">Contáctanos</h3>
             <p>Correo: <a href="mailto:fepon@epn.edu.ec">fepon@epn.edu.ec</a></p>
             <p>Teléfono: (02) 2976-300 ext. 1000</p>
             <p>Ubicación: Edificio de Asociaciones, Campus Politécnico</p>
         </div>
-    </div>
 </div>
+</div>
+
 <script>
     // Obtener el botón y el contenedor de eventos
     const toggleEventsBtn = document.getElementById('toggleEventsBtn');
