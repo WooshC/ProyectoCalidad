@@ -14,16 +14,20 @@ public class Ruta implements Serializable {
     private String ruta; // Nombre de la ruta
     private String paradas; // Paradas de la ruta
     private String horario; // Horario de la ruta
+    private String ubicacion; // Ubicación del bus dentro del campus
+    private String mapa_url; // URL del mapa de la ruta
 
     public Ruta() {
         // Constructor por defecto requerido por JPA
     }
 
-    public Ruta(Long id_bus, String ruta, String paradas, String horario) {
+    public Ruta(Long id_bus, String ruta, String paradas, String horario, String ubicacion, String mapa_url) {
         this.id_bus = id_bus;
         this.ruta = ruta;
         this.paradas = paradas;
         this.horario = horario;
+        this.ubicacion = ubicacion;
+        this.mapa_url = mapa_url;
     }
 
     public Long getIdBus() {
@@ -58,9 +62,25 @@ public class Ruta implements Serializable {
         this.horario = horario;
     }
 
+    public String getUbicacion() {
+        return ubicacion;
+    }
+
+    public void setUbicacion(String ubicacion) {
+        this.ubicacion = ubicacion;
+    }
+
+    public String getMapaUrl() {
+        return mapa_url;
+    }
+
+    public void setMapaUrl(String mapa_url) {
+        this.mapa_url = mapa_url;
+    }
+
     @Override
     public String toString() {
-        return "Nombre de la Ruta: " + ruta + ", Paradas: " + paradas + ", Horario: " + horario;
+        return "Nombre de la Ruta: " + ruta + ", Paradas: " + paradas + ", Horario: " + horario + ", Ubicación: " + ubicacion + ", Mapa URL: " + mapa_url;
     }
 
 }

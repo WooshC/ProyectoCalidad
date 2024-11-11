@@ -26,9 +26,11 @@
             <table class="table table-bordered" id="rutasTable">
                 <thead class="thead-light">
                 <tr>
-                    <th>Nombre de la Ruta</th>
+                    <th>Ruta</th>
                     <th>Paradas</th>
                     <th>Horario</th>
+                    <th>Ubicación</th>
+                    <th>Mapa</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -39,6 +41,12 @@
                                 <td><c:out value="${ruta.nombreRuta}" /></td>
                                 <td><c:out value="${ruta.paradas}" /></td>
                                 <td><c:out value="${ruta.horario}" /></td>
+                                <td><c:out value="${ruta.ubicacion}" /></td>
+                                <td>
+                                    <button class="btn btn-primary" onclick="mostrarMapa(this)" data-url="${ruta.mapaUrl}">
+                                        Ver Mapa
+                                    </button>
+                                </td>
                             </tr>
                         </c:forEach>
                     </c:when>
@@ -50,6 +58,11 @@
                 </c:choose>
                 </tbody>
             </table>
+        </div>
+
+        <div id="mapaContainer" class="my-4">
+            <h3 class="text-2xl font-bold mb-4">Mapa de la Ruta Seleccionada</h3>
+            <iframe id="mapaRuta" width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </div>
 </div>
@@ -78,6 +91,13 @@
                 }
             }
         }
+    }
+
+    function mostrarMapa(button) {
+        const mapaIframe = document.getElementById('mapaRuta');
+        const url = button.getAttribute('data-url');
+        mapaIframe.src = url;
+        document.getElementById('mapaContainer').scrollIntoView({ behavior: 'smooth' });
     }
 </script>
 
