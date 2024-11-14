@@ -55,10 +55,26 @@ public class CafeteriaJPAController implements Serializable {
         try {
             // Crear la consulta para obtener los elementos del menú del día actual
             Query query = em.createQuery("SELECT c FROM Cafeteria c WHERE c.fecha = CURRENT_DATE");
-            return query.getResultList();
+            List<Cafeteria> menuDelDia = query.getResultList();
+
+            // Limpiar posibles problemas de codificación en los atributos del menú del día
+            for (Cafeteria cafeteria : menuDelDia) {
+                if (cafeteria.getCategoria() != null) {
+                    cafeteria.setCategoria(new String(cafeteria.getCategoria().getBytes("Windows-1252"), "UTF-8"));
+                }
+                if (cafeteria.getNombrePlato() != null) {
+                    cafeteria.setNombrePlato(new String(cafeteria.getNombrePlato().getBytes("Windows-1252"), "UTF-8"));
+                }
+                if (cafeteria.getDescripcion() != null) {
+                    cafeteria.setDescripcion(new String(cafeteria.getDescripcion().getBytes("Windows-1252"), "UTF-8"));
+                }
+            }
+
+            return menuDelDia;
         } catch (Exception e) {
             e.printStackTrace();
             return new ArrayList<>();
         }
     }
+
 }

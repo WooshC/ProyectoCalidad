@@ -14,9 +14,9 @@ CREATE TABLE IF NOT EXISTS cafeteria (
 
 INSERT INTO cafeteria (fecha, categoria, nombrePlato, descripcion, precio)
 VALUES
-    ('2024-11-10', 'Almuerzos', 'Almuerzo Estudiantil', 'Entrada: Ensalada César, Plato Fuerte: Pollo a la plancha, Bebida: Limonada, Postre: Gelatina', 8.50),
-    ('2024-11-10', 'Almuerzos', 'Almuerzo Premium', 'Entrada: Sopa de tomate, Plato Fuerte: Filete de res, Bebida: Jugo de naranja, Postre: Cheesecake', 12.00),
-    ('2024-11-10', 'Desayunos', 'Desayuno Básico', 'Huevos revueltos, Pan tostado, Café o Té', 5.00);
+    ('2024-11-14', 'Almuerzos', 'Almuerzo Estudiantil', 'Entrada: Ensalada César, Plato Fuerte: Pollo a la plancha, Bebida: Limonada, Postre: Gelatina', 8.50),
+    ('2024-11-14', 'Almuerzos', 'Almuerzo Premium', 'Entrada: Sopa de tomate, Plato Fuerte: Filete de res, Bebida: Jugo de naranja, Postre: Cheesecake', 12.00),
+    ('2024-11-14', 'Desayunos', 'Desayuno Básico', 'Huevos revueltos, Pan tostado, Café o Té', 5.00);
 
 
 -- Crear la tabla `buses`
@@ -48,3 +48,8 @@ VALUES
 
 
 ALTER DATABASE javaweb CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
+
+
+UPDATE cafeteria
+SET fecha = CURDATE()  -- Cambiar la fecha por la fecha actual
+WHERE fecha = '2024-11-14';  -- Aquí se especifica la fecha que se quiere actualizar
