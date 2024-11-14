@@ -11,5 +11,5 @@ ENV MYSQL_PASSWORD=1234
 COPY ./my.cnf /etc/mysql/conf.d/my.cnf
 COPY ./init.sql /docker-entrypoint-initdb.d/init.sql
 
-# Exponer el puerto de MariaDB
-EXPOSE 3306
+# Exponer el puerto
+EXPOSE 3308

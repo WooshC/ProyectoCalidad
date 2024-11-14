@@ -1,7 +1,6 @@
 package com.poliweb.modelo;
 
 import jakarta.persistence.*;
-
 import java.io.Serializable;
 
 @Entity

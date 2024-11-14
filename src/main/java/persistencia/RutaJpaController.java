@@ -48,20 +48,29 @@ public class RutaJpaController implements Serializable {
             Query query = em.createQuery("SELECT r FROM Ruta r");
             List<Ruta> rutas = query.getResultList();
 
-            if (rutas.isEmpty()) {
-                return new ArrayList<>(); // Retorna un ArrayList vacío en caso de un error
-            }
-            logger.info(String.format("Número de rutas recuperadas: %d", rutas.size()));
-
+            // Limpiar posibles problemas de codificación en los atributos de las rutas
             for (Ruta ruta : rutas) {
-                logger.info(String.format("Ruta: %s, Paradas: %s, Horario: %s, Ubicación: %s, Mapa URL: %s",
-                        ruta.getNombreRuta(), ruta.getParadas(), ruta.getHorario(), ruta.getUbicacion(), ruta.getMapaUrl()));
+                if (ruta.getNombreRuta() != null) {
+                    ruta.setNombreRuta(new String(ruta.getNombreRuta().getBytes("Windows-1252"), "UTF-8"));
+                }
+                if (ruta.getParadas() != null) {
+                    ruta.setParadas(new String(ruta.getParadas().getBytes("Windows-1252"), "UTF-8"));
+                }
+                if (ruta.getHorario() != null) {
+                    ruta.setHorario(new String(ruta.getHorario().getBytes("Windows-1252"), "UTF-8"));
+                }
+                if (ruta.getUbicacion() != null) {
+                    ruta.setUbicacion(new String(ruta.getUbicacion().getBytes("Windows-1252"), "UTF-8"));
+                }
+                if (ruta.getMapaUrl() != null) {
+                    ruta.setMapaUrl(new String(ruta.getMapaUrl().getBytes("Windows-1252"), "UTF-8"));
+                }
             }
 
             return rutas;
         } catch (Exception e) {
             logger.log(Level.SEVERE, "Error obteniendo todas las rutas", e);
-            return new ArrayList<>(); // Retorna un ArrayList vacío en caso de un error
+            return null;
         } finally {
             em.close();
         }
