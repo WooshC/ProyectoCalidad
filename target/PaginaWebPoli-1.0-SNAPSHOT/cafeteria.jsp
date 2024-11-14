@@ -49,7 +49,7 @@
                     </ul>
                 </td>
 
-                <td>${cafeteria.precio}</td>
+                <td>${cafeteria.precioFormateado}</td>
             </tr>
         </c:forEach>
 

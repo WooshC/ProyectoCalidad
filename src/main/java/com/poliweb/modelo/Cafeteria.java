@@ -1,6 +1,8 @@
 package com.poliweb.modelo;
 
 import jakarta.persistence.*;
+
+import java.text.DecimalFormat;
 import java.util.Date;
 
 @Entity
@@ -85,4 +87,11 @@ public class Cafeteria {
     public void setPrecio(Double precio) {
         this.precio = precio;
     }
+
+    public String getPrecioFormateado() {
+        DecimalFormat decimalFormat = new DecimalFormat("#.00");
+        return decimalFormat.format(precio);
+    }
+
+
 }
