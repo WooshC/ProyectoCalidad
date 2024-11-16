@@ -19,9 +19,6 @@
         <div class="mb-4">
             <input type="text" id="searchInput" class="form-control" placeholder="Buscar ruta por nombre o paradas" onkeyup="filtrarRutas()">
         </div>
-
-        <p>Total de rutas: <c:out value="${not empty rutas ? rutas.size() : 0}" /></p>
-
         <div class="table-responsive">
             <table class="table table-bordered" id="rutasTable">
                 <thead class="thead-light">

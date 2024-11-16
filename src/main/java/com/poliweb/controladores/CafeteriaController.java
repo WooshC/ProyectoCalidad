@@ -34,11 +34,9 @@ public class CafeteriaController extends HttpServlet {
         if (isWeekday) {
             List<Cafeteria> menuItems = cafeteriaJPAController.obtenerMenuDelDia();
 
-            // Agrupar los elementos por categoría
             Map<String, List<Cafeteria>> menuGroupedByCategory = menuItems.stream()
                     .collect(Collectors.groupingBy(Cafeteria::getCategoria));
 
-            // Pasar la lista de platos agrupados por categoría al JSP
             request.setAttribute("menuGroupedByCategory", menuGroupedByCategory);
             request.getRequestDispatcher("cafeteria.jsp").forward(request, response);
         } else {

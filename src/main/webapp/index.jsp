@@ -71,11 +71,13 @@
                             <a class="nav-link" href="javascript:void(0);" onclick="showTab('cafeteria')" type="button">Cafetería</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0);" onclick="showTab('fepon')" type="button">Asociación Estudiantil</a>
+                            <a class="nav-link" href="javascript:void(0);" onclick="showTab('fepon')" type="button">FEPON</a>
                         </li>
+<!--
                         <li class="nav-item">
                             <a class="nav-link" href="javascript:void(0);" onclick="showTab('polimercado')" type="button">PoliMarket</a>
                         </li>
+-->
                     </ul>
                 </div>
             </div>
