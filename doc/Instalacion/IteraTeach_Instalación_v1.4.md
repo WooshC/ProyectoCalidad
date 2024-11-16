@@ -52,11 +52,10 @@ Si se desea realizar algun cambio para realizar pruebas o inspeccionar el funcio
 1. Cambiar los archivos objetivo para las pruebas, por ejemplo el *"CafeteriaController"* para validar la funcionalidad de la cafeteria en dias festivos con la variable isWeekday cambiandolo a true o false
 2. Una vez cambiado los archivos objetivo, se puede ejecutar el siguiente comando para levantar la aplicación con los cambios realizos
 ```
-docker-compose down
+docker-compose down -v
 ```
 Este comando nos permite bajar los contenedores y eliminarlos para que se vuelvan a levantar
-3. Recomendable tambien eliminar manualmente los volumnes en la parte de "Volumenes" de Docker Desktop
-4. Luego de verificar que se han eliminado los contenedores  y los volumenes con Dokcer Desktop podemos ejecutar el comando mencionado anteriormente para levantar la aplicación con los cambios realizados
+3. Luego de verificar que se han eliminado los contenedores  y los volumenes con Dokcer Desktop podemos ejecutar el comando mencionado anteriormente para levantar la aplicación con los cambios realizados
 ```
 docker-compose up -d
 ```
