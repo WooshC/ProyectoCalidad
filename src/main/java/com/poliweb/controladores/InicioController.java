@@ -12,6 +12,12 @@ import java.io.IOException;
 public class InicioController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/bienvenida.jsp").forward(request, response);
+        try {
+            request.getRequestDispatcher("/bienvenida.jsp").forward(request, response);
+        } catch (Exception e) {
+            e.printStackTrace();  // Puedes registrar el error en los logs si es necesario
+            request.setAttribute("errorMessage", "Lo sentimos, hubo un error inesperado. Intenta nuevamente más tarde.");
+            request.getRequestDispatcher("/errores.jsp").forward(request, response);
+        }
     }
 }

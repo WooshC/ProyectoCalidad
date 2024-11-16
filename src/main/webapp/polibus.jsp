@@ -23,6 +23,7 @@
             <table class="table table-bordered" id="rutasTable">
                 <thead class="thead-light">
                 <tr>
+                    <th>N° Ruta</th>
                     <th>Ruta</th>
                     <th>Paradas</th>
                     <th>Horario</th>
@@ -35,6 +36,7 @@
                     <c:when test="${not empty rutas}">
                         <c:forEach var="ruta" items="${rutas}">
                             <tr>
+                                <td><c:out value="${ruta.idBus}" /></td>
                                 <td><c:out value="${ruta.nombreRuta}" /></td>
                                 <td><c:out value="${ruta.paradas}" /></td>
                                 <td><c:out value="${ruta.horario}" /></td>
@@ -49,12 +51,16 @@
                     </c:when>
                     <c:otherwise>
                         <tr>
-                            <td colspan="3">No se encontraron rutas.</td>
+                            <td colspan="6">No se encontraron rutas.</td>
                         </tr>
                     </c:otherwise>
                 </c:choose>
                 </tbody>
             </table>
+        </div>
+
+        <div id="mensajeError" class="alert alert-danger" style="display: none;">
+            No se encontraron resultados para la búsqueda solicitada
         </div>
 
         <div id="mapaContainer" class="my-4">
@@ -71,10 +77,11 @@
         const filter = input.value.toLowerCase();
         const table = document.getElementById('rutasTable');
         const tr = table.getElementsByTagName('tr');
+        let hayCoincidencias = false;
 
         for (let i = 1; i < tr.length; i++) { // Comenzar desde 1 para evitar el encabezado
-            const tdNombre = tr[i].getElementsByTagName('td')[0]; // Nombre de la ruta
-            const tdParadas = tr[i].getElementsByTagName('td')[1]; // Paradas
+            const tdNombre = tr[i].getElementsByTagName('td')[1]; // Nombre de la ruta
+            const tdParadas = tr[i].getElementsByTagName('td')[2]; // Paradas
 
             if (tdNombre || tdParadas) {
                 const txtValueNombre = tdNombre.textContent || tdNombre.innerText;
@@ -83,10 +90,19 @@
                 if (txtValueNombre.toLowerCase().indexOf(filter) > -1 ||
                     txtValueParadas.toLowerCase().indexOf(filter) > -1) {
                     tr[i].style.display = ""; // Mostrar la fila
+                    hayCoincidencias = true;
                 } else {
                     tr[i].style.display = "none"; // Ocultar la fila
                 }
             }
+        }
+
+        // Mostrar u ocultar el mensaje de error
+        const mensajeError = document.getElementById('mensajeError');
+        if (!hayCoincidencias) {
+            mensajeError.style.display = "block"; // Mostrar mensaje de error
+        } else {
+            mensajeError.style.display = "none"; // Ocultar mensaje de error
         }
     }
 
