@@ -4,6 +4,7 @@
 <%@ page import="java.text.SimpleDateFormat" %>
 <%@ page import="java.util.Date" %>
 <%@ page import="java.util.Locale" %>
+<%@ page import="java.util.TimeZone" %>
 
 <html>
 <head>
@@ -12,10 +13,15 @@
 </head>
 <body>
 <%
-    Locale locale = new Locale("es", "ES");
+    // Configuración para la zona horaria GMT-5 (Ecuador)
+    TimeZone timeZone = TimeZone.getTimeZone("GMT-5");
+    Locale locale = new Locale("es", "EC");  // Configuración regional para Ecuador
     SimpleDateFormat formatter = new SimpleDateFormat("EEEE, MMMM dd, yyyy", locale);
-    String fechaActual = formatter.format(new Date());
+    formatter.setTimeZone(timeZone);  // Establecer la zona horaria explícitamente
+    String fechaActual = formatter.format(new Date());  // Formatear la fecha actual
 %>
+
+
 <h1>Menú de la Cafetería</h1>
 <h2><%= fechaActual %></h2>
 

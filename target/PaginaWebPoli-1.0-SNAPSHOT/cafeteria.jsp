@@ -12,10 +12,11 @@
 </head>
 <body>
 <%
-    Locale locale = new Locale("es", "ES");
+    Locale locale = new Locale("es", "EC");  // Configuración regional para Ecuador
     SimpleDateFormat formatter = new SimpleDateFormat("EEEE, MMMM dd, yyyy", locale);
     String fechaActual = formatter.format(new Date());
 %>
+
 <h1>Menú de la Cafetería</h1>
 <h2><%= fechaActual %></h2>
 

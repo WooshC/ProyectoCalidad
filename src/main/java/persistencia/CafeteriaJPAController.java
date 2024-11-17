@@ -9,18 +9,13 @@ import jakarta.persistence.Query;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
 
 public class CafeteriaJPAController implements Serializable {
 
     private static CafeteriaJPAController instance;
     private EntityManagerFactory emf;
     private EntityManager em;
-
-    // Constructor
-    public CafeteriaJPAController() {
-        emf = Persistence.createEntityManagerFactory("EjemploJavaWebPU");
-        em = emf.createEntityManager(); // Mantener la conexión abierta
-    }
 
     public static CafeteriaJPAController getInstance() {
         if (instance == null) {
@@ -29,8 +24,18 @@ public class CafeteriaJPAController implements Serializable {
         return instance;
     }
 
+    // Constructor
+    public CafeteriaJPAController() {
+        emf = Persistence.createEntityManagerFactory("EjemploJavaWebPU");
+        em = emf.createEntityManager(); // Mantener la conexión abierta
+    }
+
+    public EntityManager getEntityManager() {
+        return emf.createEntityManager();
+    }
 
     public List<Cafeteria> obtenerMenuDelDia() {
+        EntityManager em = getEntityManager();
         try {
             System.out.println("Iniciando la consulta para obtener el menú del día...");
 
@@ -64,10 +69,18 @@ public class CafeteriaJPAController implements Serializable {
 
             return menuDelDia;
         } catch (Exception e) {
-            System.err.println("Error al obtener el menú del día: " + e.getMessage());
-            e.printStackTrace();
-            return new ArrayList<>();
+            return null;
+        } finally {
+            em.close();  // Cerrar el EntityManager para liberar recursos
         }
     }
 
+    public void close() {
+        if (em != null && em.isOpen()) {
+            em.close();
+        }
+        if (emf != null && emf.isOpen()) {
+            emf.close();
+        }
+    }
 }
