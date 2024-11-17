@@ -1,6 +1,10 @@
 CREATE DATABASE IF NOT EXISTS javaweb;
 USE javaweb;
 
+-- Establecer la zona horaria a Ecuador (America/Guayaquil)
+SET GLOBAL time_zone = 'America/Guayaquil';
+SET time_zone = 'America/Guayaquil';
+
 -- Crear la tabla `cafeteria`
 CREATE TABLE IF NOT EXISTS cafeteria (
                                          id INT AUTO_INCREMENT PRIMARY KEY,
@@ -40,7 +44,7 @@ VALUES
     ('2024-11-16', 'Desayunos', 'Desayuno Completo', 'Huevos pochados, Pan de centeno, Jugo de tomate', 6.00),
     ('2024-11-16', 'Snacks', 'Bocadillo de pollo', 'Bocadillo de pollo con mayonesa', 2.50),
     ('2024-11-22', 'Almuerzos', 'Almuerzo Estudiantil', 'Entrada: Ensalada de tomate y pepino, Plato Fuerte: Pollo al curry, Bebida: Limonada con hierba luisa, Postre: Gelatina de frutas', 8.50),
-    ('2024-11-22', 'Almuerzos', 'Almuerzo Premium', 'Entrada: Crema de espárragos, Plato Fuerte: Pavo al horno, Bebida: Jugo de arándano, Postre: Mousse de chocolate', 12.00),
+    ('2024-11-16', 'Almuerzos', 'Almuerzo Premium', 'Entrada: Crema de espárragos, Plato Fuerte: Pavo al horno, Bebida: Jugo de arándano, Postre: Mousse de chocolate', 12.00),
     ('2024-11-22', 'Desayunos', 'Desayuno Básico', 'Tostadas con aguacate, Café o Té', 5.00),
     ('2024-11-22', 'Desayunos', 'Desayuno Completo', 'Huevos pochados, Pan de centeno, Jugo de tomate', 6.00),
     ('2024-11-22', 'Snacks', 'Bocadillo de pollo', 'Bocadillo de pollo con mayonesa', 2.50);
@@ -74,4 +78,6 @@ VALUES
     (4, 'Comite del pueblo', 'Andalucia, Av Patria, Av. América, Av. 10 de Agosto, Av, de la Prensa, Av. Jorge Garces', '6:50 AM - 8:00 PM', 'Sistemas', 'https://www.google.com/maps/embed?pb=!1m48!1m12!1m3!1d13420.061075699981!2d-78.47960749033683!3d-0.13013751287221495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m33!3e0!4m3!3m2!1d-0.2101747!2d-78.4894326!4m5!1s0x91d59a1637018127%3A0xfaae0999ceb75bde!2sAvenida%20Patria%2C%20Quito!3m2!1d-0.20782989999999998!2d-78.4968808!4m5!1s0x91d59a3c1c943d25%3A0x154758c2c292a61a!2sAv.%20Am%C3%A9rica%2C%20170129%20Quito!3m2!1d-0.1880686!2d-78.49595769999999!4m5!1s0x91d59aa32f6932a5%3A0x9567df6f01c21342!2sAv.%2010%20de%20Agosto%2C%20170521%20Quito!3m2!1d-0.18847709999999998!2d-78.4921147!4m5!1s0x91d58542dff375cb%3A0x42bb616769bbd81b!2sAv.%20de%20la%20Prensa%2C%20170104%20Quito!3m2!1d-0.1351972!2d-78.49370859999999!4m3!3m2!1d-0.12048729999999999!2d-78.4654303!5e0!3m2!1ses-419!2sec!4v1731768693458!5m2!1ses-419!2sec');
 
 ALTER DATABASE javaweb CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
+
+
 

@@ -118,9 +118,19 @@
 </div>
 
 <script>
-    // Obtener el botón y el contenedor de eventos
-    const toggleEventsBtn = document.getElementById('toggleEventsBtn');
-    const eventsList = document.getElementById('eventsList');
+    // Comprobar si las variables ya están declaradas antes de declararlas de nuevo
+    if (typeof toggleEventsBtn === 'undefined') {
+        const toggleEventsBtn = document.getElementById('toggleEventsBtn');
+    }
+    if (typeof eventsList === 'undefined') {
+        const eventsList = document.getElementById('eventsList');
+    }
+
+    // Establecer el estado inicial (ocultar eventos y configurar el texto del botón)
+    document.addEventListener('DOMContentLoaded', function() {
+        eventsList.style.display = 'none';  // Asegurarse de que los eventos estén ocultos al cargar la página
+        toggleEventsBtn.textContent = 'Ver Eventos';  // Establecer el texto del botón correctamente
+    });
 
     // Función para alternar la visibilidad de la lista de eventos
     toggleEventsBtn.addEventListener('click', function() {
