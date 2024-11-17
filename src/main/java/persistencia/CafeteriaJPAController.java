@@ -29,36 +29,45 @@ public class CafeteriaJPAController implements Serializable {
         return instance;
     }
 
-    public void agregarCafeteria(Cafeteria cafeteria) {
-        try {
-            em.getTransaction().begin();
-            em.persist(cafeteria);
-            em.getTransaction().commit();
-        } catch (Exception e) {
-            em.getTransaction().rollback();
-            e.printStackTrace();
-        }
-    }
-
-    // Obtener todos los elementos del menú
-    public List<Cafeteria> obtenerMenu() {
-        try {
-            Query query = em.createQuery("SELECT c FROM Cafeteria c");
-            return query.getResultList();
-        } catch (Exception e) {
-            e.printStackTrace();
-            return new ArrayList<>();
-        }
-    }
 
     public List<Cafeteria> obtenerMenuDelDia() {
         try {
+            System.out.println("Iniciando la consulta para obtener el menú del día...");
+
             // Crear la consulta para obtener los elementos del menú del día actual
             Query query = em.createQuery("SELECT c FROM Cafeteria c WHERE c.fecha = CURRENT_DATE");
-            return query.getResultList();
+            List<Cafeteria> menuDelDia = query.getResultList();
+
+            System.out.println("Consulta ejecutada correctamente. Elementos obtenidos: " + menuDelDia.size());
+
+            // Limpiar posibles problemas de codificación en los atributos del menú del día
+            for (Cafeteria cafeteria : menuDelDia) {
+                if (cafeteria.getCategoria() != null) {
+                    cafeteria.setCategoria(new String(cafeteria.getCategoria().getBytes("Windows-1252"), "UTF-8"));
+                }
+                if (cafeteria.getNombrePlato() != null) {
+                    cafeteria.setNombrePlato(new String(cafeteria.getNombrePlato().getBytes("Windows-1252"), "UTF-8"));
+                }
+                if (cafeteria.getDescripcion() != null) {
+                    cafeteria.setDescripcion(new String(cafeteria.getDescripcion().getBytes("Windows-1252"), "UTF-8"));
+                }
+            }
+
+            // Mostrar los detalles del menú del día
+            System.out.println("Detalles del menú del día:");
+            for (Cafeteria cafeteria : menuDelDia) {
+                System.out.println("Categoría: " + cafeteria.getCategoria());
+                System.out.println("Nombre del Plato: " + cafeteria.getNombrePlato());
+                System.out.println("Descripción: " + cafeteria.getDescripcion());
+                System.out.println("----");
+            }
+
+            return menuDelDia;
         } catch (Exception e) {
+            System.err.println("Error al obtener el menú del día: " + e.getMessage());
             e.printStackTrace();
             return new ArrayList<>();
         }
     }
+
 }
