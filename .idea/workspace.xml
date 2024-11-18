@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8561f5b8-f42e-4b50-a7f8-b5bf8b23ad06" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/target/PaginaWebPoli-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/PaginaWebPoli-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PaginaWebPoli-1.0-SNAPSHOT/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/PaginaWebPoli-1.0-SNAPSHOT/WEB-INF/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PaginaWebPoli-1.0-SNAPSHOT/WEB-INF/classes/com/poliweb/controladores/CafeteriaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PaginaWebPoli-1.0-SNAPSHOT/WEB-INF/classes/com/poliweb/controladores/CafeteriaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PaginaWebPoli-1.0-SNAPSHOT/WEB-INF/classes/persistencia/CafeteriaJPAController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PaginaWebPoli-1.0-SNAPSHOT/WEB-INF/classes/persistencia/CafeteriaJPAController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PaginaWebPoli-1.0-SNAPSHOT/cafeteria.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/PaginaWebPoli-1.0-SNAPSHOT/cafeteria.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/poliweb/controladores/CafeteriaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/poliweb/controladores/CafeteriaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/persistencia/CafeteriaJPAController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/persistencia/CafeteriaJPAController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploy/scripts/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/scripts/init.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/polibus.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/polibus.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +45,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\USUARIO\GitHub\ProyectoCalidad" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -75,6 +75,9 @@
       <workItem from="1731805871714" duration="9053000" />
       <workItem from="1731869611405" duration="43000" />
       <workItem from="1731869894747" duration="8000" />
+      <workItem from="1731956951089" duration="131000" />
+      <workItem from="1731957113829" duration="12000" />
+      <workItem from="1731959684142" duration="3599000" />
     </task>
     <servers />
   </component>

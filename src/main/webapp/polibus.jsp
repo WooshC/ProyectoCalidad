@@ -31,6 +31,7 @@
                 <table class="table table-bordered" id="rutasTable">
                     <thead class="thead-light">
                     <tr>
+                        <th>N° Ruta</th>
                         <th>Ruta</th>
                         <th>Paradas</th>
                         <th>Horario</th>
@@ -43,6 +44,7 @@
                         <c:when test="${not empty rutas}">
                             <c:forEach var="ruta" items="${rutas}">
                                 <tr>
+                                    <td><c:out value="${ruta.idBus}" /></td>
                                     <td><c:out value="${ruta.nombreRuta}" /></td>
                                     <td><c:out value="${ruta.paradas}" /></td>
                                     <td><c:out value="${ruta.horario}" /></td>
@@ -57,7 +59,7 @@
                         </c:when>
                         <c:otherwise>
                             <tr>
-                                <td colspan="3">No se encontraron rutas.</td>
+                                <td colspan="6">No se encontraron rutas.</td>
                             </tr>
                         </c:otherwise>
                     </c:choose>
