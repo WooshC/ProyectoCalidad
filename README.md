@@ -5,3 +5,4 @@ servicios esenciales del campus. El portal está dividido en varias secciones qu
 proporcionan información útil y permiten la interacción entre los estudiantes, 
 promoviendo la participación y la comunicación en la comunidad universitaria. 
 
+Son para fines educativos
