@@ -5,10 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8561f5b8-f42e-4b50-a7f8-b5bf8b23ad06" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/bienvenida.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/bienvenida.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/bienvenida.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/bienvenida.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploy/my.cnf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploy/scripts/init.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poliweb/controladores/CafeteriaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poliweb/controladores/FeponController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poliweb/controladores/InicioController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poliweb/controladores/PoliMercadoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poliweb/controladores/ProductoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poliweb/controladores/RutaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poliweb/controladores/ServicioController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poliweb/modelo/Comentario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poliweb/modelo/Producto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poliweb/modelo/Ruta.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poliweb/resources/JakartaEE10Resource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/persistencia/RutaJpaController.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,19 +46,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.PaginaWebPoli [install].executor": "Run",
+    "Maven.PaginaWebPoli [package].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "libreria",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/USUARIO/GitHub/ProyectoCalidad",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\USUARIO\GitHub\ProyectoCalidad" />
@@ -80,6 +96,9 @@
       <workItem from="1731957113829" duration="12000" />
       <workItem from="1731959684142" duration="3599000" />
       <workItem from="1731975658098" duration="1663000" />
+      <workItem from="1732306608727" duration="110000" />
+      <workItem from="1732306743475" duration="595000" />
+      <workItem from="1732307432346" duration="457000" />
     </task>
     <servers />
   </component>
