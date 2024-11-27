@@ -1,10 +1,14 @@
-
+# Ignorar archivos y carpetas generados por el compilador
 target/
+
+# Ignorar archivos y configuraciones de IntelliJ IDEA
 .idea/
-/.idea/shelf/
-/workspace.xml
-# Editor-based HTTP Client requests
+.idea/shelf/
+workspace.xml
+
+# Archivos de solicitudes HTTP del editor
 /httpRequests/
-# Datasource local storage ignored files
+
+# Archivos de almacenamiento local de las fuentes de datos
 /dataSources/
 /dataSources.local.xml
