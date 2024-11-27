@@ -5,23 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8561f5b8-f42e-4b50-a7f8-b5bf8b23ad06" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/poliweb/modelo/CafeteriaTest1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/my.cnf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/scripts/init.sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poliweb/controladores/CafeteriaController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poliweb/controladores/FeponController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poliweb/controladores/InicioController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poliweb/controladores/PoliMercadoController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poliweb/controladores/ProductoController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poliweb/controladores/RutaController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poliweb/controladores/ServicioController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poliweb/modelo/Comentario.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poliweb/modelo/Producto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poliweb/modelo/Ruta.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/poliweb/resources/JakartaEE10Resource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/persistencia/RutaJpaController.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +18,13 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,32 +41,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven.PaginaWebPoli [install].executor": "Run",
-    "Maven.PaginaWebPoli [package].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "libreria",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/USUARIO/GitHub/ProyectoCalidad",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.PaginaWebPoli [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.PaginaWebPoli [package].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;libreria&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Hp/Documents/ProyectoCalidad&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\USUARIO\GitHub\ProyectoCalidad" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.poliweb.modelo" />
     </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
       </set>
     </attachedChunks>
   </component>
@@ -99,6 +104,8 @@
       <workItem from="1732306608727" duration="110000" />
       <workItem from="1732306743475" duration="595000" />
       <workItem from="1732307432346" duration="457000" />
+      <workItem from="1732649791610" duration="1058000" />
+      <workItem from="1732664387585" duration="1499000" />
     </task>
     <servers />
   </component>
