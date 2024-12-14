@@ -1,14 +1,11 @@
-/* styles.css */
-
-/* Estilos básicos para el cuerpo */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     color: #333;
     padding: 20px;
+    margin: 0;
 }
 
-/* Tabla de menú (solo afecta a las tablas dentro del body) */
 body .menu-table {
     width: 80%;
     margin-bottom: 20px;
@@ -18,7 +15,6 @@ body .menu-table {
     overflow: hidden;
 }
 
-/* Solo afecta a las celdas dentro del cuerpo */
 body .menu-table th, body .menu-table td {
     padding: 10px;
     border: 1px solid #ddd;
@@ -30,13 +26,12 @@ body .menu-table th {
     color: white;
 }
 
-/* Estilo para las filas de detalles (inicialmente ocultas) */
 body .details {
     display: none; /* Ocultar detalles por defecto */
     background-color: #f9f9f9;
+    animation: fadeIn 0.3s ease-in-out;
 }
 
-/* Estilo para el botón de mostrar detalles */
 body .toggle-btn {
     color: #2196F3;
     cursor: pointer;
@@ -49,11 +44,6 @@ body .toggle-btn:hover {
     color: #0d8bde;
 }
 
-/* Animación para mostrar/ocultar las filas de detalles */
-body .details {
-    animation: fadeIn 0.3s ease-in-out;
-}
-
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -63,11 +53,14 @@ body .details {
     }
 }
 
-/* Estilos adicionales para mejorar la visualización */
 body ul {
     padding-left: 20px;
 }
 
 body li {
     margin-bottom: 5px;
+}
+
+:root {
+    --timezone: "GMT-5";
 }

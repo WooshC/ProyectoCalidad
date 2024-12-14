@@ -43,11 +43,11 @@ VALUES
     ('2024-11-16', 'Desayunos', 'Desayuno Básico', 'Tostadas con aguacate, Café o Té', 2.00),
     ('2024-11-16', 'Desayunos', 'Desayuno Completo', 'Huevos pochados, Pan de centeno, Jugo de tomate', 2.00),
     ('2024-11-16', 'Snacks', 'Bocadillo de pollo', 'Bocadillo de pollo con mayonesa', 2.50),
-    ('2024-11-22', 'Almuerzos', 'Almuerzo Estudiantil', 'Entrada: Ensalada de tomate y pepino, Plato Fuerte: Pollo al curry, Bebida: Limonada con hierba luisa, Postre: Gelatina de frutas', 8.50),
-    ('2024-11-16', 'Almuerzos', 'Almuerzo Premium', 'Entrada: Crema de espárragos, Plato Fuerte: Pavo al horno, Bebida: Jugo de arándano, Postre: Mousse de chocolate', 12.00),
-    ('2024-11-22', 'Desayunos', 'Desayuno Básico', 'Tostadas con aguacate, Café o Té', 3.00),
-    ('2024-11-22', 'Desayunos', 'Desayuno Completo', 'Huevos pochados, Pan de centeno, Jugo de tomate', 3.00),
-    ('2024-11-22', 'Snacks', 'Bocadillo de pollo', 'Bocadillo de pollo con mayonesa', 2.50);
+    ('2024-12-13', 'Almuerzos', 'Almuerzo Estudiantil', 'Entrada: Ensalada de tomate y pepino, Plato Fuerte: Pollo al curry, Bebida: Limonada con hierba luisa, Postre: Gelatina de frutas', 8.50),
+    ('2024-12-13', 'Almuerzos', 'Almuerzo Premium', 'Entrada: Crema de espárragos, Plato Fuerte: Pavo al horno, Bebida: Jugo de arándano, Postre: Mousse de chocolate', 12.00),
+    ('2024-12-14', 'Desayunos', 'Desayuno Básico', 'Tostadas con aguacate, Café o Té', 3.00),
+    ('2024-12-14', 'Desayunos', 'Desayuno Completo', 'Huevos pochados, Pan de centeno, Jugo de tomate', 3.00),
+    ('2024-12-14', 'Snacks', 'Bocadillo de pollo', 'Bocadillo de pollo con mayonesa', 2.50);
 
 -- Crear la tabla `buses`
 CREATE TABLE buses

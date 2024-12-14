@@ -4,7 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8561f5b8-f42e-4b50-a7f8-b5bf8b23ad06" name="Changes" comment="" />
+    <list default="true" id="8561f5b8-f42e-4b50-a7f8-b5bf8b23ad06" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/apiguardian_api_1_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit_jupiter_api_5_11_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit_platform_commons_1_11_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_0_32.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/opentest4j_1_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/testcontainers_1_17_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/persistencia/exceptions/MenuDelDiaException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/poliweb/controladores/FeponControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploy/scripts/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/scripts/init.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sonar-project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/sonar-project.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poliweb/controladores/CafeteriaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poliweb/controladores/CafeteriaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poliweb/controladores/RutaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poliweb/controladores/RutaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/persistencia/CafeteriaJPAController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistencia/CafeteriaJPAController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/persistencia/RutaJpaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistencia/RutaJpaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/bienvenida.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/bienvenida.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeteria.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeteria.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/cerrado.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cerrado.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/cafeteria.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/cafeteria.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/polibus.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/polibus.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +36,14 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Exception" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -30,17 +62,31 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.CafeteriaControllerTest.executor": "Coverage",
+    "JUnit.CafeteriaJPAControllerTest.executor": "Coverage",
+    "JUnit.CafeteriaTest.executor": "Coverage",
+    "JUnit.FeponControllerTest.executor": "Run",
+    "JUnit.FeponControllerTest.testDoGetSuccessful.executor": "Run",
+    "JUnit.InicioControllerTest.executor": "Run",
+    "JUnit.InicioControllerTest.testDoGetException.executor": "Run",
+    "JUnit.InicioControllerTest.testDoGetWithException.executor": "Run",
+    "JUnit.RutaTest.executor": "Run",
     "Maven.PaginaWebPoli [install].executor": "Run",
     "Maven.PaginaWebPoli [package].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "Refactor",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/USUARIO/GitHub/ProyectoCalidad",
+    "last_opened_file_path": "C:/Users/Windows/Downloads/mysql-connector-j-8.0.32.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "configurable.group.language",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -48,12 +94,104 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\USUARIO\GitHub\ProyectoCalidad" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.poliweb.controladores" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.FeponControllerTest">
+    <configuration name="FeponControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PaginaWebPoli" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.poliweb.controladores.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.poliweb.controladores" />
+      <option name="MAIN_CLASS_NAME" value="com.poliweb.controladores.FeponControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FeponControllerTest.testDoGetSuccessful" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PaginaWebPoli" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.poliweb.controladores.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.poliweb.controladores" />
+      <option name="MAIN_CLASS_NAME" value="com.poliweb.controladores.FeponControllerTest" />
+      <option name="METHOD_NAME" value="testDoGetSuccessful" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InicioControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PaginaWebPoli" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.poliweb.controladores.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.poliweb.controladores" />
+      <option name="MAIN_CLASS_NAME" value="com.poliweb.controladores.InicioControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InicioControllerTest.testDoGetException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PaginaWebPoli" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.poliweb.controladores.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.poliweb.controladores" />
+      <option name="MAIN_CLASS_NAME" value="com.poliweb.controladores.InicioControllerTest" />
+      <option name="METHOD_NAME" value="testDoGetException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InicioControllerTest.testDoGetWithException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PaginaWebPoli" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.poliweb.controladores.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.poliweb.controladores" />
+      <option name="MAIN_CLASS_NAME" value="com.poliweb.controladores.InicioControllerTest" />
+      <option name="METHOD_NAME" value="testDoGetWithException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.FeponControllerTest" />
+        <item itemvalue="JUnit.FeponControllerTest.testDoGetSuccessful" />
+        <item itemvalue="JUnit.InicioControllerTest.testDoGetException" />
+        <item itemvalue="JUnit.InicioControllerTest" />
+        <item itemvalue="JUnit.InicioControllerTest.testDoGetWithException" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
       </set>
     </attachedChunks>
   </component>
@@ -82,10 +220,32 @@
       <workItem from="1732306743475" duration="595000" />
       <workItem from="1732307432346" duration="457000" />
       <workItem from="1732562458680" duration="344000" />
+      <workItem from="1734124883369" duration="15000" />
+      <workItem from="1734124906378" duration="2406000" />
+      <workItem from="1734127346537" duration="2603000" />
+      <workItem from="1734147460658" duration="2528000" />
+      <workItem from="1734198107897" duration="9749000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ProyectoCalidad$CafeteriaControllerTest.ic" NAME="CafeteriaControllerTest Coverage Results" MODIFIED="1734204442634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.poliweb.controladores.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ProyectoCalidad$CafeteriaTest.ic" NAME="CafeteriaTest Coverage Results" MODIFIED="1734148527130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.poliweb.modelo.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ProyectoCalidad$InicioControllerTest.ic" NAME="InicioControllerTest Coverage Results" MODIFIED="1734204526661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.poliweb.controladores.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ProyectoCalidad$CafeteriaJPAControllerTest.ic" NAME="CafeteriaJPAControllerTest Coverage Results" MODIFIED="1734202641645" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>persistencia.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ProyectoCalidad$RutaTest.ic" NAME="RutaTest Coverage Results" MODIFIED="1734148718809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.poliweb.modelo.*</FILTER>
+    </SUITE>
   </component>
 </project>

@@ -5,8 +5,8 @@
 <%@ page import="java.util.Date" %>
 <%@ page import="java.util.Locale" %>
 <%@ page import="java.util.TimeZone" %>
-
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <title>Menú de la Cafetería</title>
     <link rel="stylesheet" type="text/css" href="css/cafeteria.css">

@@ -71,7 +71,7 @@
             <div id="mapaContainer" class="my-4" style="display: none;">
                 <!-- Mapa de la ruta seleccionada -->
                 <h3 class="text-2xl font-bold mb-4">Mapa de la Ruta</h3>
-                <iframe id="mapaRuta" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <iframe id="mapaRuta" width="100%" height="400" style="border:0" allowfullscreen title="Mapa de la ruta seleccionada"></iframe>
 
                 <!-- Botón para cerrar el mapa centrado y alineado verticalmente -->
                 <div class="flex justify-center items-center mt-4">
