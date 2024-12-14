@@ -79,19 +79,14 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0);" onclick="showTab('polibus')" type="button">Polibus</a>
+                            <button class="nav-link btn btn-light" onclick="showTab('polibus')" type="button">Polibus</button>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0);" onclick="showTab('cafeteria')" type="button">Cafetería</a>
+                            <button class="nav-link btn btn-light" onclick="showTab('cafeteria')" type="button">Cafetería</button>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0);" onclick="showTab('fepon')" type="button">FEPON</a>
+                            <button class="nav-link btn btn-light" onclick="showTab('fepon')" type="button">FEPON</button>
                         </li>
-<!--
-                        <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0);" onclick="showTab('polimercado')" type="button">PoliMarket</a>
-                        </li>
--->
                     </ul>
                 </div>
             </div>
@@ -99,9 +94,7 @@
     </header>
 
     <main class="container my-4 content">
-        <!-- Contenedor del contenido dinámico -->
         <div id="tabContent" class="tab-content" style="position: relative;">
-            <!-- Spinner que se muestra mientras carga el contenido -->
             <div id="spinner" class="spinner-wrapper" aria-live="polite">
                 <output class="spinner-border text-primary" aria-hidden="true"></output>
                 <span class="sr-only">Cargando...</span>
@@ -115,7 +108,6 @@
     </footer>
 </div>
 
-<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>

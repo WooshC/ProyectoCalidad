@@ -19,8 +19,9 @@ services:
     volumes:
       - ./:/app
       - maven_target:/app/target
-    command: bash -c "mvn clean install -DskipTests && find /app/target -name '*.war'"
-    restart: on-failure
+    command: bash -c "mvn clean install -DskipTests && find /app/target -name '*.war' && sleep infinity"
+    restart: always  # Asegura que el contenedor se mantenga corriendo incluso si falla
+
 
   webapp:
     container_name: webapp_calidad
