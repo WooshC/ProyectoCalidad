@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8561f5b8-f42e-4b50-a7f8-b5bf8b23ad06" name="Changes" comment="" />
+    <list default="true" id="8561f5b8-f42e-4b50-a7f8-b5bf8b23ad06" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +19,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Demonkinng&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/WooshC/ProyectoCalidad.git&quot;,
+    &quot;accountId&quot;: &quot;6f3d3fc8-57ba-4161-8eb3-345e67e47dec&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/deploy/my.cnf" root0="SKIP_INSPECTION" />
   </component>
@@ -24,18 +39,18 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2oqfaXy0jNOnvtZmOWMCaJvmenJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Maven.PaginaWebPoli [install].executor": "Run",
-    "Maven.PaginaWebPoli [package].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/USUARIO/GitHub/ProyectoCalidad",
+    "last_opened_file_path": "C:/Users/Angel/OneDrive - Escuela Politécnica Nacional/Semestre 6/Construccion/Practicas/2024B-ISWD633-practica6",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -52,8 +67,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.19416.15" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.19416.15" />
       </set>
     </attachedChunks>
   </component>
@@ -78,10 +93,9 @@
       <workItem from="1731957113829" duration="12000" />
       <workItem from="1731959684142" duration="3599000" />
       <workItem from="1731975658098" duration="1663000" />
-      <workItem from="1732306608727" duration="110000" />
-      <workItem from="1732306743475" duration="595000" />
-      <workItem from="1732307432346" duration="457000" />
-      <workItem from="1732562458680" duration="344000" />
+      <workItem from="1733854581177" duration="287000" />
+      <workItem from="1733855489792" duration="1384000" />
+      <workItem from="1733947354078" duration="79000" />
     </task>
     <servers />
   </component>
