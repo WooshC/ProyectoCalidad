@@ -93,11 +93,11 @@
         const tr = table.getElementsByTagName('tr');
 
         for (let i = 1; i < tr.length; i++) { // Comenzar desde 1 para evitar el encabezado
-            const tdNombre = tr[i].getElementsByTagName('td')[0]; // Nombre de la ruta
-            const tdParadas = tr[i].getElementsByTagName('td')[1]; // Paradas
+            const tdRuta = tr[i].getElementsByTagName('td')[1]; // Nombre de la ruta
+            const tdParadas = tr[i].getElementsByTagName('td')[2]; // Paradas
 
-            if (tdNombre || tdParadas) {
-                const txtValueNombre = tdNombre.textContent || tdNombre.innerText;
+            if (tdRuta || tdParadas) {
+                const txtValueNombre = tdRuta.textContent || tdRuta.innerText;
                 const txtValueParadas = tdParadas.textContent || tdParadas.innerText;
 
                 if (txtValueNombre.toLowerCase().indexOf(filter) > -1 ||

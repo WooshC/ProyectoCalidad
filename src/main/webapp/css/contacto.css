@@ -1,0 +1,80 @@
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Contenedor principal */
+#main-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f8ff; /* Azul claro para fondo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Títulos */
+#page-title, #info-title {
+    color: #0056b3; /* Azul oscuro */
+    margin-bottom: 20px;
+}
+
+/* Formulario */
+#contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #0056b3; /* Azul para bordes */
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    background-color: #0056b3; /* Azul oscuro */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #004491; /* Azul más oscuro */
+}
+
+/* Información de contacto */
+#contact-info ul {
+    padding-left: 20px;
+}
+
+#contact-info ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+a {
+    color: #0056b3; /* Azul */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

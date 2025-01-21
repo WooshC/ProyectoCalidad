@@ -23,10 +23,10 @@
 </head>
 <body>
 <div class="hero">
-    <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&q=80&w=1200&h=400" alt="EPN Campus">
+    <img src="https://www.epn.edu.ec/wp-content/uploads/2016/02/IMG_2650-espacio-de-construcci%C3%B3n-epn-biblitoeca.jpg" alt="EPN Campus">
     <div class="hero-overlay">
         <h1>Escuela Politécnica Nacional</h1>
-        <p> Excelencia en Ciencia y Tecnología al Servicio del País</p>
+        <p> La Ciencia al Servicio de la Comunidad</p>
     </div>
 </div>
 
