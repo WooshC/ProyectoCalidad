@@ -15,39 +15,22 @@ CREATE TABLE IF NOT EXISTS cafeteria (
                                          precio DECIMAL(10, 2) NOT NULL
 )ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-
 INSERT INTO cafeteria (fecha, categoria, nombrePlato, descripcion, precio)
 VALUES
-    ('2024-11-18', 'Almuerzos', 'Almuerzo Estudiantil', 'Entrada: Ensalada mixta, Plato Fuerte: Pollo al horno, Bebida: Jugo de maracuyá, Postre: Flan', 2.50),
-    ('2024-11-18', 'Almuerzos', 'Almuerzo Premium', 'Entrada: Sopa de verduras, Plato Fuerte: Pescado al vapor, Bebida: Agua de piña, Postre: Tarta de manzana', 3.25),
-    ('2024-11-18', 'Desayunos', 'Desayuno Básico', 'Avena, Pan de leche, Café o Té', 1.00),
-    ('2024-11-18', 'Desayunos', 'Desayuno Completo', 'Tortilla de huevos, Pan de pita, Jugo de naranja', 2.25),
-    ('2024-11-18', 'Snacks', 'Empanada de pollo', 'Empanada rellena de pollo desmenuzado', 2.50),
-    ('2024-11-19', 'Almuerzos', 'Almuerzo Estudiantil', 'Entrada: Ensalada de frutas, Plato Fuerte: Lomo de cerdo al grill, Bebida: Limonada, Postre: Brownie', 2.50),
-    ('2024-11-19', 'Almuerzos', 'Almuerzo Premium', 'Entrada: Crema de zanahoria, Plato Fuerte: Pechuga de pavo, Bebida: Jugo de uva, Postre: Helado', 3.00),
-    ('2024-11-19', 'Desayunos', 'Desayuno Básico', 'Huevos estrellados, Pan tostado, Café o Té', 1.00),
-    ('2024-11-19', 'Desayunos', 'Desayuno Completo', 'Yogurt con granola, Pan de chocolate, Jugo de manzana', 1.00),
-    ('2024-11-19', 'Snacks', 'Pan de yuca', 'Panecillo de yuca con queso', 2.50),
-    ('2024-11-20', 'Almuerzos', 'Almuerzo Estudiantil', 'Entrada: Sopa de pollo, Plato Fuerte: Arroz con mariscos, Bebida: Jugo de naranja, Postre: Pudín de vainilla', 2.50),
-    ('2024-11-20', 'Almuerzos', 'Almuerzo Premium', 'Entrada: Ensalada César, Plato Fuerte: Bife de chorizo, Bebida: Jugo de mandarina, Postre: Tiramisu', 3.00),
-    ('2024-11-20', 'Desayunos', 'Desayuno Básico', 'Huevos revueltos con tomate, Pan de ajo, Café o Té', 1.00),
-    ('2024-11-20', 'Desayunos', 'Desayuno Completo', 'Tostadas francesas, Jugo de fresa, Café o Té', 1.00),
-    ('2024-11-20', 'Snacks', 'Empanada de queso', 'Empanada de queso fresco', 2.50),
-    ('2024-11-21', 'Almuerzos', 'Almuerzo Estudiantil', 'Entrada: Ensalada de aguacate, Plato Fuerte: Pechuga de pollo a la parrilla, Bebida: Jugo de guanábana, Postre: Pastelito de manzana', 8.50),
-    ('2024-11-21', 'Almuerzos', 'Almuerzo Premium', 'Entrada: Crema de champiñones, Plato Fuerte: Filete de res al vino tinto, Bebida: Jugo de mora, Postre: Flan de leche', 12.00),
-    ('2024-11-21', 'Desayunos', 'Desayuno Básico', 'Bocadillos de jamón y queso, Jugo de naranja, Café o Té', 2.00),
-    ('2024-11-21', 'Desayunos', 'Desayuno Completo', 'Croissant con mermelada, Jugo de piña, Café o Té', 2.00),
-    ('2024-11-21', 'Snacks', 'Cachito de jamón', 'Cachito relleno de jamón y queso', 2.50),
-    ('2024-11-16', 'Almuerzos', 'Almuerzo Estudiantil', 'Entrada: Ensalada de tomate y pepino, Plato Fuerte: Pollo al curry, Bebida: Limonada con hierba luisa, Postre: Gelatina de frutas', 8.50),
-    ('2024-11-16', 'Almuerzos', 'Almuerzo Premium', 'Entrada: Crema de espárragos, Plato Fuerte: Pavo al horno, Bebida: Jugo de arándano, Postre: Mousse de chocolate', 12.00),
-    ('2024-11-16', 'Desayunos', 'Desayuno Básico', 'Tostadas con aguacate, Café o Té', 2.00),
-    ('2024-11-16', 'Desayunos', 'Desayuno Completo', 'Huevos pochados, Pan de centeno, Jugo de tomate', 2.00),
-    ('2024-11-16', 'Snacks', 'Bocadillo de pollo', 'Bocadillo de pollo con mayonesa', 2.50),
-    ('2024-11-22', 'Almuerzos', 'Almuerzo Estudiantil', 'Entrada: Ensalada de tomate y pepino, Plato Fuerte: Pollo al curry, Bebida: Limonada con hierba luisa, Postre: Gelatina de frutas', 8.50),
-    ('2024-11-16', 'Almuerzos', 'Almuerzo Premium', 'Entrada: Crema de espárragos, Plato Fuerte: Pavo al horno, Bebida: Jugo de arándano, Postre: Mousse de chocolate', 12.00),
-    ('2024-11-22', 'Desayunos', 'Desayuno Básico', 'Tostadas con aguacate, Café o Té', 3.00),
-    ('2024-11-22', 'Desayunos', 'Desayuno Completo', 'Huevos pochados, Pan de centeno, Jugo de tomate', 3.00),
-    ('2024-11-22', 'Snacks', 'Bocadillo de pollo', 'Bocadillo de pollo con mayonesa', 2.50);
+  ('2025-01-21', 'Almuerzos', 'Almuerzo Estudiantil', 'Entrada: Ensalada mixta, Plato Fuerte: Pollo al horno, Bebida: Jugo de maracuyá, Postre: Flan', 2.50),
+  ('2025-01-21', 'Almuerzos', 'Almuerzo Premium', 'Entrada: Sopa de verduras, Plato Fuerte: Pescado al vapor, Bebida: Agua de piña, Postre: Tarta de manzana', 3.25),
+  ('2025-01-21', 'Desayunos', 'Desayuno Básico', 'Avena, Pan de leche, Café o Té', 1.00),
+  ('2025-01-21', 'Desayunos', 'Desayuno Completo', 'Tortilla de huevos, Pan de pita, Jugo de naranja', 2.25),
+  ('2025-01-21', 'Snacks', 'Empanada de pollo', 'Empanada rellena de pollo desmenuzado', 2.50),
+  ('2025-01-21', 'Almuerzos', 'Almuerzo Premium', 'Entrada: Crema de zanahoria, Plato Fuerte: Pechuga de pavo, Bebida: Jugo de uva, Postre: Helado', 3.00),
+  ('2025-01-21', 'Snacks', 'Pan de yuca', 'Panecillo de yuca con queso', 2.50),
+  ('2025-01-21', 'Snacks', 'Empanada de queso', 'Empanada de queso fresco', 2.50),
+  ('2025-01-21', 'Desayunos', 'Desayuno Completo', 'Croissant con mermelada, Jugo de piña, Café o Té', 2.00),
+  ('2025-01-21', 'Snacks', 'Cachito de jamón', 'Cachito relleno de jamón y queso', 2.50),
+  ('2025-01-21', 'Almuerzos', 'Almuerzo Estudiantil', 'Entrada: Ensalada de tomate y pepino, Plato Fuerte: Pollo al curry, Bebida: Limonada con hierba luisa, Postre: Gelatina de frutas', 8.50),
+  ('2025-01-21', 'Almuerzos', 'Almuerzo Premium', 'Entrada: Crema de espárragos, Plato Fuerte: Pavo al horno, Bebida: Jugo de arándano, Postre: Mousse de chocolate', 12.00),
+  ('2025-01-21', 'Desayunos', 'Desayuno Básico', 'Tostadas con aguacate, Café o Té', 2.00),
+  ('2025-01-21', 'Snacks', 'Empanadas Chilenas', 'Empanadas rellenas de jamón y queso con mayonesa', 2.50);
 
 -- Crear la tabla `buses`
 CREATE TABLE buses
@@ -65,7 +48,6 @@ CREATE TABLE buses
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_0900_ai_ci;
 
-
 INSERT INTO buses
 VALUES
     (4, 'Quitumbe', 'EPN, Ladrón de Guevara, Av. Patria, Pérez Guerrero, Bolivia, Av. Universitaria, Av. Mariscal Sucre, Michelena, Av. Teniente Hugo Ortiz, Av. Cardenal de la Torre, Guanando, Cusubamba, Av. Mariscal Sucre, Cóndor Ñan hasta el terminal Quitumbe.',
@@ -78,6 +60,3 @@ VALUES
      '6:50 AM - 8:00 PM', 'Teatro', 'https://www.google.com/maps/embed?pb=!1m40!1m12!1m3!1d31918.269623726846!2d-78.51741761763492!3d-0.23867584284919183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m25!3e0!4m5!1s0x91d59a107e1cd44b%3A0x88a284f66939ed4!2sEPN%2C%20Avenida%20Ladr%C3%B3n%20de%20Guevara%2C%20Quito!3m2!1d-0.2124413!2d-78.4905842!4m3!3m2!1d-0.21560269999999998!2d-78.4908821!4m3!3m2!1d-0.2376587!2d-78.50923139999999!4m3!3m2!1d-0.2459429!2d-78.5196485!4m5!1s0x91d599074de788f7%3A0x9a7b61c31c35ee8b!2sTerminal%20El%20Recreo%20(Parada)%2C%20Quito!3m2!1d-0.2519058!2d-78.5214481!5e0!3m2!1ses-419!2sec!4v1731201968360!5m2!1ses-419!2sec');
 
 ALTER DATABASE javaweb CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
-
-
-
